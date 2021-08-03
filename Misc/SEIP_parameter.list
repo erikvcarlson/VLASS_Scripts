@@ -1,0 +1,4 @@
+imagename='VLASS_SE_J0807_0432'
+phasecenter='J2000 08:07:57.5 +04.32.34.6'
+imaging_mode='VLASS-SE-CONT-MOSAIC'
+imsize=[3132,3132]
