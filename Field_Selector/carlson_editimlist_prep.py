@@ -1,4 +1,4 @@
-def carlson_editimlist_prep(msfile, imagesize, phase_center,image_parameter_list, matchregex=['^0', '^1', '^2']):
+def carlson_editimlist_prep(msfile, imagesize, phase_center, matchregex=['^0', '^1', '^2']):
 #carlson_editimlist_prep('VLASS2.1.sb38561374.eb38565040.59070.62333981482.ms/',500,'J2000 08:07:57.5 +04.32.34.6', 'SEIP_parameter.list', matchregex=['^0', '^1', '^2'])       
     from pipeline.infrastructure import casa_tools
     import numpy
@@ -109,9 +109,6 @@ def carlson_editimlist_prep(msfile, imagesize, phase_center,image_parameter_list
 
     fieldlist = [str(i) for i in fieldlist]
     str1 = ','.join(fieldlist)
-    final_string = 'field = [' + str1 + ']\n'
-    file_object = open(image_parameter_list, 'a')
-    file_object.write(final_string)
-    file_object.close()
+    fieldlist = str1 
 
     return fieldlist
