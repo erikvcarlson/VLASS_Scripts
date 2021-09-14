@@ -1,0 +1,5 @@
+imagename='VLASS_SE_Shell_Test_c0.6arcsec' #image name - can not contain spaces
+phasecenter='J2000 09:25:07.275 +14.44.25.775' #phasecenter of the image the user wants to image. Typically centered on the source
+imaging_mode='VLASS-SE-CONT-MOSAIC' #Leave unchanged 
+imsize=[3132,3132] #image size in pixels to include the buffer 
+cell='0.6arcsec' #cell size as defined by the user
