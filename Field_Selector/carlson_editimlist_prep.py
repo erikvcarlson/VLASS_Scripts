@@ -1,5 +1,6 @@
 def carlson_editimlist_prep(msfile, imagesize, phase_center, matchregex=['^0', '^1', '^2']):
-#carlson_editimlist_prep('VLASS2.1.sb38561374.eb38565040.59070.62333981482.ms/',500,'J2000 08:07:57.5 +04.32.34.6', 'SEIP_parameter.list', matchregex=['^0', '^1', '^2'])       
+#must be run with VLASS version of CASA to allow for casa_tools to work properly
+#carlson_editimlist_prep('VLASS2.1.sb38561374.eb38565040.59070.62333981482.ms/',500,'J2000 08:07:57.5 +04.32.34.6', matchregex=['^0', '^1', '^2'])       
     from pipeline.infrastructure import casa_tools
     import numpy
     
