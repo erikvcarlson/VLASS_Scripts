@@ -3,7 +3,7 @@ def carlson_editimlist_prep(msfile, imagesize, phase_center, matchregex=['^0', '
     from pipeline.infrastructure import casa_tools
     import numpy
     
-    buffer_arcsec = 1380 #Primary beam in arcseconds at 20%
+    buffer_arcsec = 1000 #Primary beam in arcseconds at 20%
     dist_arcsec = imagesize + buffer_arcsec
     dist_arcsec = str(dist_arcsec) + 'arcsec'
     distance = dist_arcsec
