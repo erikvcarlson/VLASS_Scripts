@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --cpus-per-task=4   # Amount of memory needed by each process (ppn) in the job.
+#SBATCH --cpus-per-task=1   # Amount of memory needed by each process (ppn) in the job.
 #SBATCH -D /lustre/aoc/students/ecarlson/data/J0000+0000/working/ # Working directory (PBS_O_WORKDIR) set to your Lustre area
 #SBATCH --mem=64GB
 #SBATCH --mail-type=END,FAIL                 # Send mail on begin, end and abort
