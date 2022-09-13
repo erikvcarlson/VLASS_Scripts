@@ -1,0 +1,15 @@
+#Ensure to check the pipeline outputs after each run to ensure reliability of your results. 
+#Additionally, if you forsee utilizing a significant number of VLASS measurment sets (>10) notify the archive team via help desk ticket such that they 
+#remove the full measurement sets when you are done transfering them to your NRAO lustre area. 
+
+
+1) Identify the required measurement set(s) utilizing the Tile_Boundaries.csv and VLASS_Tile_Puller.py
+2) Request the calibrated measurement set(s) from data.nrao.edu and download to a working directory on the NRAO cluster
+3) Open casa and run the carlson_editimlist_prep.py script, with your respective phase center and image size. Save the output string.
+4) Use the output string from carlson_editimlist_prep.py and use the split command to generate a sub measurement set with the required fields.
+5) Move this sub-MS to a new working directory with the run_SE.sh, command_script.py and SEIP_parameters.list files located in this repo. 
+6) Change the run_SE.sh, command_script.py and SEIP_parameters.list with the appropriate imaging parameters, file locations and resource allocations
+7) When calculating image size, to avoid aliasing, your image size will be your desired image size plus 1000 arcseconds divided by your desired cell size (typically
+0.6 arcseconds for SE images)
+8) If utilizing multiple cores for imaging you must use mpicasa for the pipeline to parallelize tclean 
+9) Once all files have been modify, you can submit a slurm job via the run_SE.sh/run_SE_slurm.sh scripts. 
