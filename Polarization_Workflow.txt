@@ -1,7 +1,7 @@
 #Warning: Polarization products are still undering going QA. Check pipeline outputs after each run and use at your own risk. 
 
 1) First Generate SE Image using your user-defined parameters
-2) Move the source's measurment set and reimaging_resources.tgz (check the products directory) into a need working directory
+2) Move the source's measurment set, SEIP_parameter.list, and reimaging_resources.tgz (check the products directory) into a need working directory
 3) Generate a CCIP_parameter.list from the example in this repository
 4) Generate a command_script_polarization.py script similar to the example in this repository
 5) Submit a non-interactive job using a slurm script. Ensure you are using casa version casa-6.4.1-12-pipeline-2022.1.1.5
