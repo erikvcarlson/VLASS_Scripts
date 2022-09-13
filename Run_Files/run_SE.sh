@@ -11,5 +11,4 @@
 
 # casa's python requires a DISPLAY for matplot, so create a virtual X server
 #ensure that the below path is pointed at your command script. 
-xvfb-run -d /home/casa/packages/pipeline/casa-6.1.3-3-pipeline-2021.1.1.29/bin/casa --pipeline --nogui --nologger -c /lustre/aoc/students/ecarlson/data/J0925+1444_Custom_Size/command_script.py
-
+xvfb-run -d /home/casa/packages/pipeline/casa-6.4.1-12-pipeline-2022.1.1.5/bin/casa --pipeline --nogui --nologger -c  command_script.py
