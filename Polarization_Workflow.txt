@@ -1,3 +1,5 @@
+#Warning: Polarization products are still undering going QA. Check pipeline outputs after each run and use at your own risk. 
+
 1) First Generate SE Image using your user-defined parameters
 2) Move the source's measurment set and reimaging_resources.tgz (check the products directory) into a need working directory
 3) Generate a CCIP_parameter.list from the example in this repository
