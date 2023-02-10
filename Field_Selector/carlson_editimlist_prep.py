@@ -5,12 +5,12 @@ def carlson_editimlist_prep(msfile, imagesize, phase_center, matchregex=['^0', '
     import numpy
     
     buffer_arcsec = 1000 #Primary beam in arcseconds at 20%
-    dist_arcsec = imagesize + buffer_arcsec
+    dist_arcsec = imagesize/2 + buffer_arcsec
     dist_arcsec = str(dist_arcsec) + 'arcsec'
     distance = dist_arcsec
     
     # Created STM 2016-May-16 use center direction measure
-    # Returns list of fields from msfile within a rectangular box of size distance
+    # Returns list of fields from msfile within a rectangular box of size 2 * distance
 
     qa = casa_tools.quanta
     me = casa_tools.measures

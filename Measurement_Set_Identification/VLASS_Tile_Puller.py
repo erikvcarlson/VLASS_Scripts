@@ -29,7 +29,7 @@ def unique(list1):
 a = 0
 while a ==0: 
     try: 
-        RA = input("Please Enter your Right Ascention in Decimal Format: ") #121.98974
+        RA = input("Please Enter your Right Ascension in Decimal Format: ") #121.98974
         DEC = input("Please Enter your Declination in Decimal Format: ") #4.54293
         Im_Size = input("Please Enter the Proposed Image Size to the nearest Arcsecond: ")
         RA = float(RA)
