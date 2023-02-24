@@ -47,10 +47,10 @@ data = pd.read_fwf('https://archive-new.nrao.edu/vlass/VLASS_dyn_summary.php', s
 Im_Size_Degrees = Im_Size/3600
         
         
-RA_Right = RA + Im_Size_Degrees
-RA_Left = RA - Im_Size_Degrees
-Dec_Up = DEC + Im_Size_Degrees
-Dec_Down = DEC - Im_Size_Degrees
+RA_Right = RA + Im_Size_Degrees/2
+RA_Left = RA - Im_Size_Degrees/2
+Dec_Up = DEC + Im_Size_Degrees/2
+Dec_Down = DEC - Im_Size_Degrees/2
 
 measurement_set_list = []
 
