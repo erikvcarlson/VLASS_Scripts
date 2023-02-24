@@ -70,14 +70,21 @@ for tile in data:
             if RA_L[i] > RA_Tile_Start and RA_L[i] < RA_Tile_End and DEC_L[i] > Dec_Tile_Start and DEC_L[i] < Dec_Tile_End:
                 tile_id = tile[0]
                 VLASS_id = tile[5]
-                URL = "https://archive-new.nrao.edu/vlass/quicklook/" + VLASS_id + '/' + tile_id + '/'
+                
+                if VLASS_id == 'VLASS1.1' or VLASS_id == 'VLASS1.2':
+                    VLASS_id_url = VLASS_id + 'v2'
+                else: 
+                     VLASS_id_url = VLASS_id
+                
+                URL = "https://archive-new.nrao.edu/vlass/quicklook/" + VLASS_id_url + '/' + tile_id + '/'
                 page = requests.get(URL).text
                 JName_regex = 'J\d{6}[+]\d{6}[.]\d\d[.]\d{4}\S{3}'
                 m = re.search(JName_regex, page)
+
                 if m:
                     found_JName = m.group(0)
                     full_directory_name = VLASS_id + '.ql.' + tile_id + '.' + found_JName
-                    URL_New = "https://archive-new.nrao.edu/vlass/quicklook/" + VLASS_id + '/' + tile_id + '/' + full_directory_name + '/casa_pipescript.py'
+                    URL_New = "https://archive-new.nrao.edu/vlass/quicklook/" + VLASS_id_url + '/' + tile_id + '/' + full_directory_name + '/casa_pipescript.py'
                     try:
                         url = URL_New
                         search_file_for_ms =  urllib.request.urlopen(url)
@@ -92,5 +99,3 @@ for tile in data:
                         pass
                     
 print("\nThe unique measurement sets required are:")                    
-unique(measurement_set_list)
-
