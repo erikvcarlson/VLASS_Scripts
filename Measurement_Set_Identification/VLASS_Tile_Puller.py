@@ -77,7 +77,8 @@ for index, tile in data.iterrows():
 
             URL = "https://archive-new.nrao.edu/vlass/quicklook/" + VLASS_id_url + '/' + tile_id + '/'
             page = requests.get(URL).text
-            JName_regex = 'J\d{6}[+]\d{6}[.]\d\d[.]\d{4}\S{3}'
+
+            JName_regex = 'J\d{6}[+|-]\d{6}[.]\d\d[.]\d{4}\S{3}'
             m = re.search(JName_regex, page)
 
             if m:
