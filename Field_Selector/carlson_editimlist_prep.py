@@ -4,7 +4,7 @@ def carlson_editimlist_prep(msfile, imagesize, phase_center, matchregex=['^0', '
     from pipeline.infrastructure import casa_tools
     import numpy
     
-    buffer_arcsec = 1000 #Primary beam in arcseconds at 20%
+    buffer_arcsec = 1000 #Primary beam in arcseconds at 17%
     dist_arcsec = imagesize/2 + buffer_arcsec
     dist_arcsec = str(dist_arcsec) + 'arcsec'
     distance = dist_arcsec
@@ -70,7 +70,7 @@ def carlson_editimlist_prep(msfile, imagesize, phase_center, matchregex=['^0', '
     print('Cataloged {} fields'.format(nf))
 
     # Construct offset separations in ra,dec
-    print('Looking for fields with maximum separation {}'.format(distance))
+    print('Looking for fields with maximum separation in RA or DEC, {}, from the phase center'.format(distance))
     nreject = 0
     skipmatch = matchregex == '' or matchregex == []
     for i in range(nf):
@@ -104,7 +104,7 @@ def carlson_editimlist_prep(msfile, imagesize, phase_center, matchregex=['^0', '
                 else:
                     nreject += 1
 
-    print('Found {} fields within {}'.format(len(fieldlist), distance))
+    print('Found {} fields within {} rectolinear distance'.format(len(fieldlist), distance))
     if not skipmatch:
         print('Rejected {} distance matches for regex'.format(nreject))
 
