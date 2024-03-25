@@ -19,9 +19,7 @@ authors:
   - given-names: Pallavi
     family-names: Patil
     affiliation: 'John Hopkins University'
-identifiers:
-  - type: doi
-    value: 10.5281/zenodo.7076243
+doi: 10.5281/zenodo.7076243 
 repository-code: 'https://github.com/erikvcarlson/VLASS_Scripts'
 date-released: 2022-09-01
 version: 1.0
