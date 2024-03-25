@@ -8,8 +8,8 @@ message: >-
   metadata from this file.
 type: software
 authors:
-  - given-names: Carlson
-    family-names: Erik
+  - given-names: Erik
+    family-names: Carlson
     email: erikvcarlson@uri.edu
     affiliation: University of Rhode Island
   - given-names: Amy
