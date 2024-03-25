@@ -8,15 +8,15 @@ message: >-
   metadata from this file.
 type: software
 authors:
-  - given-names: Amy
-    family-names: Kimball
-    email: akimball@nrao.edu
-    affiliation: National Radio Astronomy Observatory
   - given-names: Carlson
     family-names: Erik
     name-particle: V
     email: erikvcarlson@uri.edu
     affiliation: University of Rhode Island
+  - given-names: Amy
+    family-names: Kimball
+    email: akimball@nrao.edu
+    affiliation: National Radio Astronomy Observatory
   - given-names: Pallavi
     family-names: Patil
     affiliation: 'John Hopkins University '
