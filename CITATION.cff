@@ -18,8 +18,10 @@ authors:
     affiliation: National Radio Astronomy Observatory
   - given-names: Pallavi
     family-names: Patil
-    affiliation: 'John Hopkins University '
+    affiliation: 'John Hopkins University'
 identifiers:
   - type: doi
     value: 10.5281/zenodo.7076243
 repository-code: 'https://github.com/erikvcarlson/VLASS_Scripts'
+date-released: 2017-12-18
+version: 1.0
