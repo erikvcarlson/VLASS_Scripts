@@ -10,7 +10,6 @@ type: software
 authors:
   - given-names: Carlson
     family-names: Erik
-    name-particle: V
     email: erikvcarlson@uri.edu
     affiliation: University of Rhode Island
   - given-names: Amy
