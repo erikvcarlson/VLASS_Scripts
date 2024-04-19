@@ -11,7 +11,7 @@ The first step in generating an image is to identify which measurement set (MS) 
 
 To identify where your data resides, we will use the VLASS_Tile_Puller.py script located in the Measurement_Set_Identification folder of this repository. This code can be run inside of CASA or inside of an iPython environment like Jupyter Notebook or Google Colab.
 
-For this tutorial, we will use the same source as the Appendix in VLASS Memo 20. 
+For this tutorial, we will use the same source as the Appendix in VLASS Memo 20 and will generate a science image of 500"x500". 
 
 
 ```python
