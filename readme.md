@@ -460,7 +460,5 @@ Once our new measurment set is located in our working directory, we can remove t
 
 After changing the name of the measurment set in our command_script.py file, we can submit our run_SE.sh script to the slurm scheduler for the data to be imaged.  
 
-
-```python
-
+If you use this script to generate your own user-defined images, please use the citation located in this Github Repository. 
 ```
