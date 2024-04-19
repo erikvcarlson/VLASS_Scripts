@@ -8,7 +8,7 @@ context.set_state('ProjectSummary', 'telescope', 'EVLA') #standard
 context.set_state('ProjectStructure', 'ppr_file', 'PPR.xml') #standard
 context.set_state('ProjectStructure', 'recipe_name', 'hifv_vlassSEIP') #standard
 try:
-    hifv_importdata(nocopy=True, vis=['/lustre/aoc/students/ecarlson/data/VLASS_695/J0925+1444_VLASS_split.ms'], session=['session_1'])
+    hifv_importdata(nocopy=True, vis=['J0925+1444_VLASS_split.ms'], session=['session_1'])
     #change the vis variable to the location of your measurement set
     hif_editimlist(parameter_file='SEIP_parameter.list')
     #change the parameter_file to your image parameter file
