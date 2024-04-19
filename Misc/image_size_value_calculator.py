@@ -16,7 +16,7 @@ def closest(lst, K):
       
     return lst[min(range(len(lst)), key = lambda i: abs(lst[i]-K))]
       
-# To calculate the value K, take the desire cell size (default 0.6 arcseconds) and devide it by your imagesize plus the buffer (1380 arcseconds)
+# To calculate the value K, take the desire cell size (default 0.6 arcseconds) and divide it by your imagesize plus the buffer (1380 arcseconds)
 # For example (500+1380)/0.6 = 3133 which should be your value of K. This image size should then be appended to your image parameter list as 
 # imsize = [K,K]
 # if other than the default cell size is to be used then the user should also append the cell size to the image parameter list for 
