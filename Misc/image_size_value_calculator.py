@@ -2,11 +2,11 @@ factor_2 = []
 factor_3 = []
 factor_5 = []
 factor_7 = []
-for i in range(1,1500):
-    factor_2.append(2*i)
-    factor_3.append(3*i)
-    factor_5.append(5*i)
-    factor_7.append(7*i)
+for i in range(1,25):
+    factor_2.append(2**i)
+    factor_3.append(3**i)
+    factor_5.append(5**i)
+    factor_7.append(7**i)
     
 factor_list = factor_2 + factor_3 + factor_5 + factor_7
 factor_list.sort()
