@@ -208,7 +208,7 @@ The SEIP_parameter.list is a simple text file with the several keyword arguement
 imagename='VLASS_Tutorial' #image name - can not contain spaces
 phasecenter='J2000 08:07:57.68 +04.32.34.55' #phasecenter of the image the user wants to image. Typically centered on the source
 imaging_mode='VLASS-SE-CONT-MOSAIC' #Leave unchanged 
-imsize=[3125,3125] #image size in pixels to include the buffer 
+imsize=[6561,6561] #image size in pixels to include the buffer 
 cell='0.6arcsec' #cell size as defined by the user
 ```
 
@@ -249,7 +249,7 @@ K = 5433
 print(closest(factor_list, K))
 ```
 
-    3125
+    6561
 
 
 ##### run_SE.sh
