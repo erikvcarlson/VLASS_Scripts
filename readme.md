@@ -212,9 +212,9 @@ imsize=[3125,3125] #image size in pixels to include the buffer
 cell='0.6arcsec' #cell size as defined by the user
 ```
 
-Note, the `imsize` argument is the image size in pixels including the buffer. To calculate the image size, take the desired cell size (0.6" in this case), and divide it by your image size plus the buffer, which is typically 1380 arcseconds. For example, for a 500" science image:
+Note, the `imsize` argument is the image size in pixels including the buffer. To calculate the image size, take the desired cell size (0.6" in this case), and divide it by your image size plus the two times buffer, which is typically 1380 arcseconds. For example, for a 500" science image:
 
-(500+1380)/0.6 = 3133 pixels
+(500+2*1380)/0.6 = 5433 pixels
 
 For CASA's `tclean` parameter to run efficiently, the image size should be a power of 2, 3, 5, or 7. You can use the following code to identify the closest pixel size which is equal to one
 
@@ -240,12 +240,12 @@ def closest(lst, K):
     return lst[min(range(len(lst)), key = lambda i: abs(lst[i]-K))]
       
 # To calculate the value K, take the desire cell size (default 0.6 arcseconds) and divide it by your imagesize plus the buffer (1380 arcseconds)
-# For example (500+1380)/0.6 = 3133 which should be your value of K. This image size should then be appended to your image parameter list as 
+# For example (500+2*1380)/0.6 = 5433 which should be your value of K. This image size should then be appended to your image parameter list as 
 # imsize = [K,K]
 # if other than the default cell size is to be used then the user should also append the cell size to the image parameter list for 
 # example cell = ['0.4arcsec','0.4arcsec']
 
-K = 3133
+K = 5433
 print(closest(factor_list, K))
 ```
 
